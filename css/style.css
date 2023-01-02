@@ -1,0 +1,555 @@
+@charset "utf-8";
+
+.wrapper {
+    overflow: hidden;
+}
+
+/* headerここから */
+h1,
+h2,
+h3,
+a,
+.nav-list {
+    font-family: 'Gorditas', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    color: rgb(69, 2, 131);
+    font-size: 42px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: rgb(69, 2, 131);
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-image: url(../img/hero.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.nav-area {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.nav-list {
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.nav-title {
+    font-size: 24px;
+    margin-left: 18px;
+}
+
+.firstview-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.firstview-title {
+    font-size: 74px;
+    text-align: center;
+}
+
+.firstview-subtitle {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 34px;
+}
+
+.firstview-button-area {
+    width: 210px;
+    margin: 56px auto 0;
+    text-align: center;
+}
+
+.firstview-button {
+    display: block;
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 30px;
+    line-height: 3.7;
+    width: 100%;
+}
+
+
+/* newsここから */
+.news-contents {
+    width: 900px;
+    margin: 80px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-post + .news-post{
+    margin-top: 28px;
+}
+
+.post-text {
+    color: #727272;
+}
+
+.post-text span {
+    display: inline-block;
+    text-align: center;
+    width: 72px;
+    background-color: rgba(219, 219, 219,.7);
+    color: black;
+    padding: 8px;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+
+/* serviceここから */
+.service {
+    width: 95%;
+    max-width: 1200px;
+    margin: 150px auto 0;
+}
+
+.service-contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+.service-content {
+    width: 31%;
+}
+
+.service-image-area {
+    width: 100%;
+}
+
+.service-image {
+    width: 100%;
+}
+
+.service-detail-title {
+    font-size: 20px;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.service-detail-text {
+    line-height: 1.5;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.service-button-area {
+    width: 210px;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.common-button {
+    display: block;
+    font-size: 14px;
+    border-radius: 30px;
+    line-height: 3.7;
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right,#b509ff,#3d0069);
+}
+
+.common-button:hover {
+    background: linear-gradient(to right, #3d0069,#b509ff);
+}
+
+/* worksここから */
+.works {
+    width: 95%;
+    margin: 200px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.work-image-area {
+   width: 60%;
+   height: 420px;
+}
+
+.work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-content {
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    right: 0px;
+}
+
+.work-content::after {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -700px;
+    width: 1400px;
+    height: 550px;
+    z-index: -1;
+    display: block;
+    background-color: #f0f0f0;
+}
+
+.work-subtitle {
+    margin-top: 15px;
+}
+
+.work-detail {
+    line-height: 1.5;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.work-button-area {
+    width: 210px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+
+/* companyここから */
+.company {
+    width: 100%;
+    height: 550px;
+    background-image: url(../img/bg-face.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+}
+
+.company-content {
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.company-message {
+    font-size: 43px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    font-family: 'Gorditas', cursive;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(transparent 75%,#FFFF00 75%);
+}
+
+.company-detail {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.company-detail p {
+    text-align: center;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.company-button-area {
+    width: 220px;
+    text-align: center;
+    margin: 30px auto 0;
+}
+
+/* recruitここから */
+.recruit {
+    margin-top: 100px;
+}
+
+.recruit-content {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.recruit-detail {
+    width: 40%;
+    background-color: #f0f0f0;
+    padding-top: 65px;
+}
+
+.recruit-message {
+    text-align: center;
+    margin-top: 26px;
+}
+
+.recruit-image-area {
+    width: 60%;
+}
+
+.recruit-image {
+    width: 100%;
+}
+
+.recruit-button-area {
+    width: 220px;
+    margin: 34px auto 0;
+    text-align: center;
+}
+
+/* contactここから */
+.contact {
+    background-color: #f0f0f0;
+    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contact-message {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.contact-button-area {
+    width: 220px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+
+
+
+/* footerここから */
+.footer {
+    width: 100%;
+    background-color: black;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-family: 'Gorditas', cursive;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-lists {
+    width: 800px;
+    margin: 0 auto 0;
+    text-align: center;
+}
+
+.footer-list {
+    display: inline-block;
+    color: white;
+    margin-right: 26px;
+}
+
+.copyright-area {
+    text-align: center;
+    color: #af8df3;
+    margin-top: 46px;
+    font-size: 14px;
+}
+
+.scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: white;
+    box-shadow: 0 0 4px#727272;
+    opacity: 0.8;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: rgb(87, 87, 87);
+    cursor: pointer;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media(max-width:900px){
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 13px;
+    }
+
+    .common-button {
+        line-height: 3.2;
+    }
+    /* headerここから */
+    .nav-lists {
+        display: none;
+    }
+
+    .firstview-contents {
+        margin-left: 40px;
+    }
+
+    .firstview-title {
+        text-align: left;
+        font-size: 36px;
+    }
+
+    .firstview-subtitle {
+        text-align: left;
+        font-size: 16px;
+        width: 180px;
+        line-height: 1.5;
+    }
+
+    .firstview-button-area {
+        margin-left: 0;
+        margin-top: 26px;
+    }
+
+    /* newsここから */
+    .news-contents {
+        flex-direction: column;
+        width: 95%;
+        margin-top: 70px;
+    }
+
+    .news-content {
+        margin-top: 20px;
+    }
+
+    /* serviceここから */
+    .service {
+        margin-top: 70px;
+    }
+
+    .service-contents {
+        display: block;
+    }
+
+    .service-content {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service-content + .service-content {
+        margin-top: 48px;
+    }
+
+    .service-detail-title {
+        font-size: 18px;
+    }
+
+    .service-detail-text {
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    /* worksここから */
+    .works {
+        display: block;
+        position: static;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        padding-bottom: 40px;
+        background-color: #f0f0f0;
+    }
+
+    .work-content {
+        position: static;
+        width: 350px;
+        margin: 30px auto 0; 
+    }
+
+    .work-content::after {
+        display: none;
+    }
+
+    .work-image-area {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* companyここから */
+    .company {
+        width: 98%;
+        background-image: url(../img/bg-circle.png);
+    }
+
+    .company-content {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .company-message {
+        font-size: 30px;
+        line-height: 1.5;
+    }
+
+    /* recruitここから */
+    .recruit {
+        margin-top: 70px;
+    }
+
+    .recruit-content {
+        flex-direction: column-reverse;
+    }
+
+    .recruit-detail {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    .recruit-image-area {
+        width: 100%;
+    }
+
+    .contact {
+        margin-top: 70px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .contact-message {
+        width: 350px;
+        margin: 20px auto 0;
+        line-height: 1.5;
+    }
+
+    /* footerここから */
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .footer-lists {
+        width: 100%;
+    }
+
+    .footer-list {
+        font-size: 14px;
+    }
+
+    .footer-list:last-of-type {
+        margin-right: 0;
+    }
+}
