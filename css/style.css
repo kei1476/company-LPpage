@@ -11,6 +11,13 @@
 .menu {
     display: none;
 }
+.fa-caret-right {
+    position: absolute;
+    top: 33%;
+    right: 30px;
+    transition: .2s;
+}
+
 /* headerここから */
 h1,
 h2,
@@ -112,6 +119,7 @@ a,
     border-radius: 30px;
     line-height: 3.7;
     width: 100%;
+    position: relative;
 }
 
 
@@ -207,6 +215,7 @@ a,
     width: 100%;
     color: white;
     background: linear-gradient(to right,#b509ff,#3d0069);
+    position: relative;
 }
 
 .common-button:hover {
@@ -429,7 +438,6 @@ a,
 
 @media(max-width:900px){
     /* headerここから */
-
     .menu {
             display: block;
             width: 30px;

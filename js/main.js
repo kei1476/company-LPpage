@@ -10,7 +10,6 @@
             });
         });
     }
-
     scrollFirstview();
 
     function Animation() {
@@ -22,7 +21,8 @@
             pageTop.classList.remove('show');
         }
     }
-    window.addEventListener('scroll', Animation);
+window.addEventListener('scroll', Animation);
+    
     
 // header固定
     $(function () {
@@ -39,7 +39,6 @@
     });
     
     
-    
 // ハンバーガーメニュー レスポンシブメニュー
     const hambtn = document.getElementById("menu");
     const responsiveMenu = document.getElementById("responsive-menu");
@@ -49,7 +48,17 @@
     });
 
 
+// ボタン矢印
 
+function moveCaret (commonButton) {
+    $(commonButton).hover(function () {
+        $(".fa-caret-right").css("transform", "translateX(50%)");
+        }, function () {
+        $(".fa-caret-right").css("transform", "translateX(-50%)");    
+    });   
+}
 
+moveCaret(".common-button");
+moveCaret(".firstview-button");
 
 
