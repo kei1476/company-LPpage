@@ -10,15 +10,31 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Gorditas&family=Montserrat:ital,wght@0,200;0,300;0,800;1,700&display=swap"
         rel="stylesheet">
-    <script src="js/jquery-3.6.3.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="nav-area">
+                <div class="responsive-menu" id="responsive-menu">
+                    <nav class="responsive-nav">
+                        <ul class="responsive-nav-lists">
+                            <li class="responsive-nav-list">NEWS</li>
+                            <li class="responsive-nav-list">SERVICE</li>
+                            <li class="responsive-nav-list">WORKS</li>
+                            <li class="responsive-nav-list">COMPANY</li>
+                            <li class="responsive-nav-list">RECRUIT</li>
+                            <li class="responsive-nav-list">CONTACT</li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="nav-title-area">
                     <h2 class="nav-title">PON DESIGN</h2>
+                </div>
+                <div class="menu" id="menu">
+                    <span class="menu__line--top"></span>
+                    <span class="menu__line--middle"></span>
+                    <span class="menu__line--bottom"></span>
                 </div>
                 <div class="nav-wrapper">
                     <nav>
@@ -51,14 +67,35 @@
                     </div>
                     <div class="news-content">
                         <div class="news-post">
-                            <p class="post-text">2030.02.01<span>お知らせ</span>Webデザインニュースサイト「ウェブマガジン」に取材いただきました</p>
+                            <div class="date">
+                                <p class="post-text">2030.02.01<span>お知らせ</span></p>
+                            </div>
+                            <div class="post-content">
+                                <p>Webデザインニュースサイト「ウェブマガジンに取材いただきました</p>
+                            </div>
                         </div>
                         <div class="news-post">
+                            <div class="date">
+                                <p class="post-text">2030.01.25<span>制作実績</span></p>
+                            </div>
+                            <div class="post-content">
+                                <p>Smoothiesta様のWebサイトを制作いたしました</p>
+                            </div>
+                        </div>
+                        <div class="news-post">
+                            <div class="date">
+                                <p class="post-text">2030.01.20<span>採用</span></p>
+                            </div>
+                            <div class="post-content">
+                                <p>Webデザイナーを1名募集中です!</p>
+                            </div>
+                        </div>
+                        <!-- <div class="news-post">
                             <p class="post-text">2030.01.25<span>制作実績</span>Smoothiesta様のWebサイトを制作いたしました</p>
                         </div>
                         <div class="news-post">
                             <p class="post-text">2030.01.20<span>採用</span>Webデザイナーを1名募集中です!</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -115,7 +152,7 @@
                 <div class="company-content">
                     <h2 class="section-title">COMPANY</h2>
                     <p class="section-subtitle">私たちについて</p>
-                    <p class="company-message">サイトのゴール＝夢をかなえること</p>
+                    <p class="company-message"><span>サイトのゴール＝夢をかなえること</span></p>
                     <div class="company-detail">
                         <p class="company-detail-text">お客様の夢を叶えること。</p>
                         <p class="company-detail-text">それがWebサイトのゴールであり,私たちが目指すことです。</p>
@@ -170,6 +207,7 @@
             <button class="scroll-top" id="button">↑</button>
         </footer>
     </div>
+    <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

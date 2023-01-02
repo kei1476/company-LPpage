@@ -4,6 +4,13 @@
     overflow: hidden;
 }
 
+.responsive-menu {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
 /* headerここから */
 h1,
 h2,
@@ -18,13 +25,13 @@ a,
 .section-title {
     text-align: center;
     color: rgb(69, 2, 131);
-    font-size: 42px;
+    font-size: 38px;
 }
 
 .section-subtitle {
     text-align: center;
     color: rgb(69, 2, 131);
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 15px;
     font-weight: bold;
 }
@@ -32,7 +39,6 @@ a,
 .header {
     width: 100%;
     height: 100vh;
-    z-index: -1;
     background-image: url(../img/hero.jpg);
     background-position: center center;
     background-size: cover;
@@ -43,12 +49,29 @@ a,
 .nav-area {
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
+    width: 100%;
+    height: 64px;
+    z-index: 2;
+    transition-duration: .4s;
+}
+
+.nav-wrapper nav {
+    margin-top: 22px;
+}
+
+.nav-list {
+    padding-right: 13px;
 }
 
 .nav-list {
     display: inline-block;
     margin-right: 18px;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.nav-title-area {
+    margin-top: 20px;
 }
 
 .nav-title {
@@ -99,6 +122,16 @@ a,
     display: flex;
     justify-content: space-between;
 }
+
+.news-content {
+    width: 730px;
+}
+
+.date,
+.post-content {
+    display: inline-block;
+}
+
 
 .news-post + .news-post{
     margin-top: 28px;
@@ -260,7 +293,12 @@ a,
     font-weight: bold;
     font-family: 'Gorditas', cursive;
     font-family: 'Montserrat', sans-serif;
+    /* background: linear-gradient(transparent 75%,#FFFF00 75%); */
+}
+
+.company-message span {
     background: linear-gradient(transparent 75%,#FFFF00 75%);
+
 }
 
 .company-detail {
@@ -294,7 +332,8 @@ a,
 .recruit-detail {
     width: 40%;
     background-color: #f0f0f0;
-    padding-top: 65px;
+    padding-top: 35px;
+    padding-bottom: 30px;
 }
 
 .recruit-message {
@@ -308,6 +347,7 @@ a,
 
 .recruit-image {
     width: 100%;
+    height: 100%;
 }
 
 .recruit-button-area {
@@ -388,18 +428,112 @@ a,
 }
 
 @media(max-width:900px){
-    .section-title {
-        font-size: 32px;
-    }
-
-    .section-subtitle {
-        font-size: 13px;
-    }
-
-    .common-button {
-        line-height: 3.2;
-    }
     /* headerここから */
+
+    .menu {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: fixed;
+            top: 26px;
+            right: 18px;
+            margin-left: auto;
+            z-index: 100;
+        }
+    
+        .menu__line--top,
+        .menu__line--middle,
+        .menu__line--bottom {
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(245, 242, 242);
+            position: absolute;
+            transition: 0.5s;
+        }
+    
+        .menu__line--top {
+            top: 0;
+        }
+    
+        .menu__line--middle {
+            top: 9px;
+        }
+    
+        .menu__line--bottom {
+            bottom: 0;
+        }
+    
+        .menu.open span:nth-of-type(1) {
+            top: 14px;
+            transform: rotate(45deg);
+        }
+    
+        .menu.open span:nth-of-type(2) {
+            opacity: 0;
+        }
+    
+        .menu.open span:nth-of-type(3) {
+            top: 14px;
+            transform: rotate(-45deg);
+        }
+    
+        .responsive-menu {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(#70309F, #270E67);
+            position: relative;
+            z-index: 5;
+        }
+    
+        .responsive-nav {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+        .responsive-nav-list {
+            font-family: 'Gorditas', cursive;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            margin-top: 30px;
+            text-align: center;
+        }
+    
+        .responsive-menu.appear {
+            display: block;
+        }
+    
+        .section-title {
+            font-size: 32px;
+        }
+    
+        .section-subtitle {
+            font-size: 13px;
+        }
+    
+        .common-button {
+            line-height: 3.2;
+        }
+    .nav-area {
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: block;
+    }
+
+    .nav-title-area {
+        display: inline-block;
+    }
+
+    .nav-title {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+
     .nav-lists {
         display: none;
     }
@@ -434,6 +568,11 @@ a,
 
     .news-content {
         margin-top: 20px;
+    }
+
+    .post-content {
+        margin-top: 8px;
+        font-size: 14px;
     }
 
     /* serviceここから */
@@ -496,13 +635,19 @@ a,
     }
 
     .company-content {
-        width: 50%;
+        width: 320px;
         margin: 0 auto;
     }
 
     .company-message {
-        font-size: 30px;
+        font-size: 32px;
         line-height: 1.5;
+        width: 280px;
+        margin: 26px auto 0;
+    }
+
+    .company-detail-text {
+        font-size: 13px;
     }
 
     /* recruitここから */
@@ -552,4 +697,29 @@ a,
     .footer-list:last-of-type {
         margin-right: 0;
     }
+}
+
+@media(max-width:530px){
+
+    .work-image-area {
+        height: auto;
+    }
+    .work-image {
+        object-fit: contain;
+    }
+
+    .company-content {
+        width: 70%;
+    }
+
+    .recruit {
+        margin-top: 0;
+    }
+
+    .company-detail,
+    .contact-message,
+    .recruit-message {
+        font-size: 16px;
+    }
+
 }

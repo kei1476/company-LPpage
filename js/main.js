@@ -1,7 +1,7 @@
 'use strict';
-// トップに戻るボタン
 
-    function scrollTop() {
+// トップに戻るボタン
+    function scrollFirstview() {
         const target = document.getElementById('button');
         target.addEventListener('click', () => {
             window.scrollTo({
@@ -11,7 +11,7 @@
         });
     }
 
-    scrollTop();
+    scrollFirstview();
 
     function Animation() {
         let pageTop = document.getElementById('button');
@@ -23,16 +23,33 @@
         }
     }
     window.addEventListener('scroll', Animation);
-
-    const menu = document.getElementById("menu");
-    menu.addEventListener('click', () => {
-        menu.classList.toggle('open');
+    
+// header固定
+    $(function () {
+        var navPos = $(".nav-area").offset().top;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > navPos) {
+                $(".nav-area").css("position", "fixed");
+                $(".nav-area").css("background-color", "#21054D");
+            } else {
+                $(".nav-area").css("position", "static");
+                $(".nav-area").css("background-color", "transparent");
+            }
+        });
+    });
+    
+    
+    
+// ハンバーガーメニュー レスポンシブメニュー
+    const hambtn = document.getElementById("menu");
+    const responsiveMenu = document.getElementById("responsive-menu");
+    hambtn.addEventListener('click', () => {
+        hambtn.classList.toggle('open');
+        responsiveMenu.classList.toggle('appear')
     });
 
 
-const target = document.getElementById("menu");
-target.addEventListener('click', () => {
-    target.classList.toggle('open');
-});
+
+
 
 
